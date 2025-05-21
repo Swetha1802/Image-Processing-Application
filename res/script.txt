@@ -1,0 +1,176 @@
+
+#Loading
+
+load res/source.png source
+load res/mask_img.png mask
+
+red-component source rc-source
+red-component source mask rc-mask
+
+green-component source gc-source
+green-component source mask gc-mask
+
+blue-component source bc-source
+blue-component source mask bc-mask
+
+sepia source sepia-source
+sepia source mask sepia-mask
+sepia source sepia-source-split split 60
+sepia source mask sepia-mask-split split 60
+
+greyscale source greyscale-source
+greyscale source mask greyscale-mask
+greyscale source greyscale-source-split split 60
+greyscale source mask greyscale-mask-split split 60
+
+blur source blur-source
+blur source mask blur-mask
+blur source blur-source-split split 60
+blur source mask blur-mask-split split 60
+
+sharpen source sharpen-source
+sharpen source mask sharpen-mask
+sharpen source sharpen-source-split split 60
+sharpen source mask sharpen-mask-split split 60
+
+save res/red-component-source.png rc-source
+save res/red-component-mask.png rc-mask
+
+save res/green-component-source.png rc-source
+save res/green-component-mask.png rc-mask
+
+save res/blue-component-source.png rc-source
+save /res/blue-component-mask.png rc-mask
+
+save res/sepia-source.png sepia-source
+save res/sepia-mask.png sepia-mask
+save res/sepia-source-split.png sepia-source-split
+save res/sepia-mask-split.png sepia-mask-split
+
+save res/greyscale-source.png greyscale-source
+save res/greyscale-mask.png greyscale-mask
+save res/greyscale-source-split.png greyscale-source-split
+save res/greyscale-mask-split.png greyscale-mask-split
+
+save res/blur-source.png blur-source
+save res/blur-mask.png blur-mask
+save res/blur-source-split.png blur-source-split
+save res/blur-mask-split.png blur-mask-split
+
+save res/sharpen-source.png sharpen-source
+save res/sharpen-mask.png sharpen-mask
+save res/sharpen-source-split.png sharpen-source-split
+save res/sharpen-mask-split.png sharpen-mask-split
+
+load tiger.jpeg tiger
+
+#Component Visualisation
+red-component tiger tiger-red
+save res/tiger-red.jpg tiger-red
+
+green-component tiger tiger-green
+save res/tiger-green.jpg tiger-green
+
+blue-component tiger tiger-blue
+save res/tiger-blue.jpg tiger-blue
+
+#rgb split
+rgb-split tiger tiger-red tiger-green tiger-blue
+save res/tiger-split-red.jpg tiger-red
+save res/tiger-split-green.jpg tiger-green
+save res/tiger-split-blue.jpg tiger-blue
+
+#rgb-combine
+rgb-combine tiger-combine tiger-red tiger-green tiger-blue
+save res/tiger-combine.jpg tiger-combine
+
+#Color Representation
+value-component tiger tiger-value
+save res/tiger-value.jpg tiger-value
+
+intensity-component tiger tiger-intensity
+save res/tiger-intensity.jpg tiger-intensity
+
+luma-component tiger tiger-luma
+save res/tiger-luma.jpg tiger-luma
+
+#Flip
+vertical-flip tiger tiger-vertical
+save res/tiger-vertical.jpg tiger-vertical
+
+horizontal-flip tiger tiger-horizontal
+save res/tiger-horizontal.jpeg tiger-horizontal
+
+horizontal-flip tiger-vertical tiger-vertical-horizontal
+save res/tiger-vertical-horizontal.jpg tiger-vertical-horizontal
+
+blur tiger tiger-blur
+save res/tiger-blur.jpeg tiger-blur
+
+blur tiger tiger_blur_sp split 60
+save res/tiger_blur_sp.png tiger_blur_sp
+
+sharpen tiger tiger-sharpen
+save res/tiger-sharpen.jpeg tiger-sharpen
+
+sharpen tiger tiger_sharp_sp split 80
+save res/tiger_sharp_sp.png tiger_sharp_sp
+
+sepia tiger tiger-sepia
+save res/tiger-sepia.jpeg tiger-sepia
+
+sepia tiger tiger_sepia_sp split 40
+save res/tiger_sepia_sp.jpeg tiger_sepia_sp
+
+greyscale tiger tiger-greyscale
+save res/tiger-greyscale.jpeg tiger-greyscale
+
+greyscale tiger tiger_grey_sp split 30
+save res/tiger_grey_sp.jpeg tiger_grey_sp
+
+#Histogram
+histogram tiger tiger_histogram
+save res/tiger_histogram.jpg tiger_histogram
+
+color-correct tiger tiger_color_correct
+save res/tiger_color_correct.png tiger_color_correct
+
+histogram tiger_color_correct tiger_color_correct_histogram
+save res/tiger_color_correct_histogram.jpg tiger_color_correct_histogram
+
+color-correct tiger tiger_color_correct_sp split 75
+save res/tiger_color_correct_sp.png tiger_color_correct_sp
+
+level-adjust 0 100 200 tiger tiger_level
+save res/tiger_level.jpeg tiger_level
+
+histogram tiger_level tiger_level_histogram
+save res/tiger_level_histogram.jpg tiger_level_histogram
+
+level-adjust 0 150 228 tiger tiger_level2
+save res/tiger_level2.jpeg tiger_level2
+
+histogram tiger_level2 tiger_level2_histogram
+save res/tiger_level2_histogram.jpg tiger_level2_histogram
+
+level-adjust 0 100 200 tiger tiger_level_sp split 40
+save res/tiger_level_sp.jpeg tiger_level_sp
+
+compress 50 tiger tiger_compression_50
+save res/tiger_compression_50.png tiger_compression_50
+
+histogram tiger_compression_50 tiger_compression_50_histogram
+save res/tiger_compression_50_histogram.jpg tiger_compression_50_histogram
+
+compress 65 tiger tiger_compression_65
+save res/tiger_compression_65.png tiger_compression_65
+
+histogram tiger_compression_65 tiger_compression_65_histogram
+save res/tiger_compression_65_histogram.jpg tiger_compression_65_histogram
+
+#brighten and darken
+brighten 70 tiger tiger-brighten
+save res/tiger-brighten.jpeg tiger-brighten
+
+darken 90 tiger tiger-darken
+save res/tiger-darken.jpeg tiger-darken
