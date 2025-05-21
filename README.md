@@ -196,3 +196,10 @@ The project includes a robust test suite within the `test/` folder, covering:
 
 * **Unit Tests**: Comprehensive tests for all Model components, ensuring the correctness of image manipulation algorithms.
 * **Controller Tests**: Verification of controller logic and its interaction with the Model and View (using mocks for the View).
+
+## 6. Authors
+
+Swetha Shankara Raman
+
+Afrah Fathima
+
